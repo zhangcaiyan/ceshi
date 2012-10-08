@@ -1,5 +1,7 @@
 Ceshi::Application.routes.draw do
 
+  resources :infos
+
   devise_for :users
 
   # This line mounts Refinery's routes at the root of your application.
@@ -7,7 +9,7 @@ Ceshi::Application.routes.draw do
   # If you would like to change where this extension is mounted, simply change the :at option to something different.
   #
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
-  mount Refinery::Core::Engine, :at => '/pages'
+  mount Refinery::Core::Engine, :at => '/'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
