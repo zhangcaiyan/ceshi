@@ -58,5 +58,10 @@ module Ceshi
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    initializer 'add named route overrides' do |app|
+      app.routes_reloader.paths << File.expand_path('../named_routes_overrides.rb',__FILE__)
+    end
+
   end
 end
